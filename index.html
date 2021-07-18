@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+  <title>
+    PancakeSwap token trading history chart-Binance Chain Mainnetwork
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- Nucleo Icons -->
+  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link href="./assets/css/font-awesome.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="./assets/css/argon-design-system.css?v=1.2.2" rel="stylesheet" />
+
+ <!-- chart  Files -->
+  <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css">
+<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/widgets.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+ <!-- chart  Files -->
+
+
+</head>
+
+<body class="index-page">
+  <!-- Navbar -->
+  <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg bg-white navbar-light position-sticky top-0 shadow py-2">
+    <div class="container">
+     <!--
+      <a class="navbar-brand mr-lg-5" href="./index.html">
+        <img src="./assets/img/brand/blue.png">
+      </a>
+      -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbar_global">
+        <div class="navbar-collapse-header">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a href="./index.html">
+                <img src="./assets/img/brand/blue.png">
+              </a>
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
+              <i class="ni ni-ui-04 d-lg-none"></i>
+              <span class="nav-link-inner--text">DEFI Market</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-xl">
+              <div class="dropdown-menu-inner">
+                <a href="#" class="media d-flex align-items-center">
+                  <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
+                    <i class="ni ni-spaceship"></i>
+                  </div>
+                  <div class="media-body ml-3">
+                    <h6 class="heading text-primary mb-md-1">Getting started</h6>
+                    <p class="description d-none d-md-inline-block mb-0">Check token history</p>
+                  </div>
+                </a>
+                <a href="#" class="media d-flex align-items-center">
+                  <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
+                    <i class="ni ni-palette"></i>
+                  </div>
+                  <div class="media-body ml-3">
+                    <h6 class="heading text-primary mb-md-1">Foundation</h6>
+                    <p class="description d-none d-md-inline-block mb-0"></p>
+                  </div>
+                </a>
+                <a href="#" class="media d-flex align-items-center">
+                  <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
+                    <i class="ni ni-ui-04"></i>
+                  </div>
+                  <div class="media-body ml-3">
+                    <h5 class="heading text-warning mb-md-1">Components</h5>
+                    <p class="description d-none d-md-inline-block mb-0"></p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </li>
+          
+        </ul>
+        <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+          <li class="nav-item">
+            <a class="nav-link nav-link-icon" href="#" target="_blank" data-toggle="tooltip" title="Like us on Facebook">
+              <i class="fa fa-facebook-square"></i>
+              <span class="nav-link-inner--text d-lg-none">Facebook</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-icon" href="#" target="_blank" data-toggle="tooltip" title="Follow us on Instagram">
+              <i class="fa fa-instagram"></i>
+              <span class="nav-link-inner--text d-lg-none">Instagram</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-icon" href="#" target="_blank" data-toggle="tooltip" title="Follow us on Twitter">
+              <i class="fa fa-twitter-square"></i>
+              <span class="nav-link-inner--text d-lg-none">Twitter</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-icon" href="#" target="_blank" data-toggle="tooltip" title="Star us on Github">
+              <i class="fa fa-github"></i>
+              <span class="nav-link-inner--text d-lg-none">Github</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-primary" href="#" target="_blank">
+              <span class="nav-link-inner--text">Chart</span>
+            </a>
+          </li>
+ 
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+ 
+
+
+<div class="section pb-0 section-components">
+<div class="container mb-5">
+
+
+ 
+
+<div class="container">
+  <!-- <span class="badge badge-pill badge-default text-uppercase">Send</span>-->
+  <div class="row">
+
+
+<div class="col">
+<div class="form-group">
+<label>Chain Network</label>
+
+<select class="custom-select" id="SelectChain">
+ 
+  <option value="bsc">Binance</option>
+ <!--<option value="ethereum">Ethereum</option>--> 
+
+</select>
+
+</div>
+</div>
+
+<div class="col">
+<div class="form-group">
+<label>PancakeSwap Token Address</label>
+<input type="text" id="TokenAddress" maxlength="50" class="form-control" placeholder="0x111222333...555">
+
+</div>
+</div>
+
+
+
+
+</div>
+
+<div class="col">
+
+ 
+ <button id="SubmitToken" type="submit" class="btn btn-primary">Submit</button>   
+
+</div>
+
+
+
+ 
+<div class="col-3">
+<div class="form-group">
+<div id="tvchart"></div>
+</div>
+</div>
+
+
+</div>
+ 
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+  <footer class="footer has-cards">
+
+    <div class="container">
+      <div class="row row-grid align-items-center my-md">
+        <div class="col-lg-6">
+          <h3 class="text-primary font-weight-light mb-2">Trading Chart On PancakeSwap!</h3>
+          
+        </div>
+        <div class="col-lg-6 text-lg-center btn-wrapper">
+          <button target="_blank" href="#" rel="nofollow" class="btn btn-icon-only btn-twitter rounded-circle" data-toggle="tooltip" data-original-title="Follow us">
+            <span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
+          </button>
+          <button target="_blank" href="#" rel="nofollow" class="btn-icon-only rounded-circle btn btn-facebook" data-toggle="tooltip" data-original-title="Like us">
+            <span class="btn-inner--icon"><i class="fab fa-facebook"></i></span>
+          </button>
+          <button target="_blank" href="#" rel="nofollow" class="btn btn-icon-only btn-dribbble rounded-circle" data-toggle="tooltip" data-original-title="Follow us">
+            <span class="btn-inner--icon"><i class="fa fa-dribbble"></i></span>
+          </button>
+          <button target="_blank" href="#" rel="nofollow" class="btn btn-icon-only btn-github rounded-circle" data-toggle="tooltip" data-original-title="Star on Github">
+            <span class="btn-inner--icon"><i class="fa fa-github"></i></span>
+          </button>
+        </div>
+      </div>
+      <hr>
+      <div class="row align-items-center justify-content-md-between">
+        <div class="col-md-6">
+          <div class="copyright">
+            &copy; 2020 <a href="" target="_blank">DEFI</a>.
+          </div>
+        </div>
+        <div class="col-md-6">
+          <ul class="nav nav-footer justify-content-end">
+            <li class="nav-item">
+              <a href="" class="nav-link" target="_blank">DEFI</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link" target="_blank">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link" target="_blank">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link" target="_blank">License</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="./assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="./assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+  <script src="./assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+  <script src="./assets/js/plugins/bootstrap-switch.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="./assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <script src="./assets/js/plugins/moment.min.js"></script>
+  <script src="./assets/js/plugins/datetimepicker.js" type="text/javascript"></script>
+  <script src="./assets/js/plugins/bootstrap-datepicker.min.js"></script>
+  <!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <script src="./assets/js/argon-design-system.min.js?v=1.2.2" type="text/javascript"></script>
+
+
+
+  <script>
+var _0x3e4a=['dexTrades','includes','timeInterval','2kkVcLc','json','37edTYOI','close','346667fzzvJx','SelectChain','setData','\x0a{\x0a\x20\x20ethereum(network:\x20','open','271082EpTcOe','9ojbrxM','2021-07-17T13:30:00Z','application/json;\x20charset=utf-8','#SubmitToken','html','Address\x20wrong','log','parseFloat(it.timeInterval.day):',']\x20}\x0a\x20\x20\x20\x20\x20\x20exchangeName:\x20{is:\x20\x22Pancake\x22}\x0a\x20\x20\x20\x20\x20\x20baseCurrency:\x20{is:\x20','getFullYear','#tvchart','getElementById','getMonth','volume','high','split','map','795VQkXxN','toISOString','236769nuBXCu','1fyLLPa','parseFloat(it.open):','click','https://graphql.bitquery.io/','TokenAddress','getTime','UTC','3426yQvYak','cors','addCandlestickSeries','data','<br><br><br>No\x20Data','length','BQYvhnv04csZHapr','day','}\x0a\x20\x20\x20\x20\x20\x20quoteCurrency:\x20{is:\x20\x220xe9e7cea3dedca5984780bafc599bd69add087d56\x22}\x0a\x20\x20\x20\x20)\x20{\x0a\x20\x20\x20\x20\x20\x20timeInterval\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20day\x0a\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20low:\x20quotePrice(calculate:\x20minimum)\x0a\x20\x20\x20\x20\x20\x20high:\x20quotePrice(calculate:\x20maximum)\x0a\x20\x20\x20\x20\x20\x20open:\x20minimum(of:\x20block,\x20get:\x20quote_price)\x0a\x20\x20\x20\x20\x20\x20close:\x20maximum(of:\x20block,\x20get:\x20quote_price)\x0a\x20\x20\x20\x20\x20\x20openTime:\x20minimum(of:\x20block,\x20get:\x20time)\x0a\x20\x20\x20\x20\x20\x20closeTime:\x20maximum(of:\x20block,\x20get:\x20time)\x0a\x20\x20\x20\x20}\x0a\x20\x20}\x0a}\x0a\x0a\x0a','POST','835PRlzXF','IBZNwtpRiDIwEIW9','stringify','value','getDay','475921ufJazR','ethereum','1YcYuiM',')\x20{\x0a\x20\x20\x20\x20dexTrades(\x0a\x20\x20\x20\x20\x20\x20options:\x20{limit:\x203000,\x20asc:\x20\x22timeInterval.day\x22}\x0a\x20\x20\x20\x20\x20\x20date:\x20{\x20between:\x20[','153273UEjInQ','#fromPayment','applyOptions'];var _0x1c22fe=_0x4e2d;(function(_0x3c4575,_0x35e961){var _0x53024b=_0x4e2d;while(!![]){try{var _0x4e8756=parseInt(_0x53024b(0xe0))*parseInt(_0x53024b(0xf5))+-parseInt(_0x53024b(0xf4))+-parseInt(_0x53024b(0xf2))*-parseInt(_0x53024b(0x106))+-parseInt(_0x53024b(0xfc))*parseInt(_0x53024b(0x117))+parseInt(_0x53024b(0x119))*parseInt(_0x53024b(0x115))+-parseInt(_0x53024b(0x10d))*-parseInt(_0x53024b(0x10b))+parseInt(_0x53024b(0x10f))*-parseInt(_0x53024b(0xe1));if(_0x4e8756===_0x35e961)break;else _0x3c4575['push'](_0x3c4575['shift']());}catch(_0x52f7a7){_0x3c4575['push'](_0x3c4575['shift']());}}}(_0x3e4a,0x582d6));async function loadBitqueryData(_0x5a7562,_0x39caf6,_0x4196d7,_0xa79436){var _0x38aff4=_0x4e2d;const _0x5d8791=JSON[_0x38aff4(0x108)],_0x3d1ee3=_0x38aff4(0x11c)+_0x4196d7+_0x38aff4(0x10e)+_0x5d8791(_0x7dfb6b(_0x5a7562))+',\x20'+_0x5d8791(_0x7dfb6b(_0x39caf6))+']\x20}\x0a\x20\x20\x20\x20\x20\x20time:\x20{\x20between:\x20['+_0x5d8791(_0x3d97a8(_0x5a7562))+',\x20'+_0x5d8791(_0x3d97a8(_0x39caf6))+_0x38aff4(0xe9)+_0x5d8791(_0xa79436)+_0x38aff4(0x104);var _0x324201=_0x38aff4(0x102),_0x2ed505=_0x38aff4(0x107),_0x4367b4=_0x324201+_0x2ed505;const _0x5a6e64=await fetch(_0x38aff4(0xf8),{'method':_0x38aff4(0x105),'headers':new Headers({'Content-Type':_0x38aff4(0xe3),'X-API-KEY':_0x4367b4}),'body':JSON['stringify']({'query':_0x3d1ee3}),'mode':_0x38aff4(0xfd)}),_0x36cb45=console[_0x38aff4(0xe7)],_0x13b286={'width':0x3e8,'height':0x190,'timeScale':{'timeVisible':!![],'secondsVisible':![]}},_0x75ab7c=document['getElementById']('tvchart'),_0x52fac3=LightweightCharts['createChart'](_0x75ab7c,_0x13b286),_0x40ee6e=_0x52fac3[_0x38aff4(0xfe)]();_0x40ee6e[_0x38aff4(0x111)]({'priceFormat':{'type':_0x38aff4(0xee),'precision':0x12,'minMove':0.05}});const _0x2ec3ae=await _0x5a6e64[_0x38aff4(0x116)]();console[_0x38aff4(0xe7)]('data:'+_0x2ec3ae);if(_0x2ec3ae['data'][_0x38aff4(0x10c)][_0x38aff4(0x112)][_0x38aff4(0x101)]>0x5){const _0x291e3a=_0x2ec3ae[_0x38aff4(0xff)][_0x38aff4(0x10c)][_0x38aff4(0x112)][_0x38aff4(0xf1)](_0x123c8f=>{var _0x3f1101=_0x38aff4,_0xa0913=new Date(_0x123c8f[_0x3f1101(0x114)][_0x3f1101(0x103)]),_0x56df9b=_0xa0913['getMonth'](),_0x45d647=_0xa0913['getDay'](),_0x538289=_0xa0913[_0x3f1101(0xea)](),_0x173a2e=0x12c;return console[_0x3f1101(0xe7)](_0x3f1101(0xf6)+parseFloat(_0x123c8f[_0x3f1101(0xdf)])+_0x3f1101(0xe8)+_0x123c8f['timeInterval'][_0x3f1101(0x103)]),{'time':_0x123c8f[_0x3f1101(0x114)][_0x3f1101(0x103)],'open':parseFloat(_0x123c8f[_0x3f1101(0xdf)]),'high':parseFloat(_0x123c8f[_0x3f1101(0xef)]),'low':parseFloat(_0x123c8f['low']),'close':parseFloat(_0x123c8f[_0x3f1101(0x118)])};});_0x40ee6e[_0x38aff4(0x11b)](_0x291e3a);var _0x291984=new Date(),_0x2323bd=_0x291984[_0x38aff4(0xed)](),_0x4971d6=_0x291984[_0x38aff4(0x10a)](),_0x350a9f=_0x291984[_0x38aff4(0xea)]();_0x52fac3['timeScale']()['setVisibleRange']({'from':new Date(Date[_0x38aff4(0xfb)](_0x350a9f,_0x2323bd,_0x4971d6,0x0,0x0,0x0,0x0))['getTime']()/0x3e8,'to':new Date(Date[_0x38aff4(0xfb)](_0x350a9f,_0x2323bd,_0x4971d6,0x0,0x0,0x0,0x0))[_0x38aff4(0xfa)]()/0x3e8});}else $('#tvchart')[_0x38aff4(0xe5)](_0x38aff4(0x100));function _0x3d97a8(_0xd6940f){var _0x5b545b=_0x38aff4;return new Date(_0xd6940f)[_0x5b545b(0xf3)]();}function _0x7dfb6b(_0x4a9014){var _0x3d968a=_0x38aff4;return _0x3d97a8(_0x4a9014)[_0x3d968a(0xf0)]('T')[0x0];}}function _0x4e2d(_0x77dde5,_0x37afe2){return _0x4e2d=function(_0x3e4a72,_0x4e2d6f){_0x3e4a72=_0x3e4a72-0xdf;var _0x2b9057=_0x3e4a[_0x3e4a72];return _0x2b9057;},_0x4e2d(_0x77dde5,_0x37afe2);}function CheckToken(){var _0x2c71aa=_0x4e2d;console[_0x2c71aa(0xe7)](document[_0x2c71aa(0xec)](_0x2c71aa(0xf9))[_0x2c71aa(0x109)]),(async()=>{var _0x4c3b6a=_0x2c71aa;const _0x88caa7=['2015-01-28T09:30:00Z',_0x4c3b6a(0xe2)];await loadBitqueryData(..._0x88caa7,document[_0x4c3b6a(0xec)](_0x4c3b6a(0x11a))[_0x4c3b6a(0x109)],document[_0x4c3b6a(0xec)]('TokenAddress')['value']);})();}$(_0x1c22fe(0xe4))[_0x1c22fe(0xf7)](function(){var _0x250ada=_0x1c22fe;$(_0x250ada(0xeb))[_0x250ada(0xe5)]('');var _0x219f45=document[_0x250ada(0xec)](_0x250ada(0xf9))[_0x250ada(0x109)];_0x219f45[_0x250ada(0x113)]('0x')?CheckToken():$(_0x250ada(0xeb))[_0x250ada(0xe5)](_0x250ada(0xe6));}),$(_0x1c22fe(0x110))['on'](_0x1c22fe(0xf7),function(){console['log']($(this)['val']());});
+</script>
+
+
+  
+</body>
+
+</html>
